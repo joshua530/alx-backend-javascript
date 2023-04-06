@@ -27,11 +27,11 @@ class StudentClass {
         this.lastName = lastName;
     }
 
-    workOnHomework(): string {
-        return "Currently working";
-    }
-
     displayName(): string {
         return this.firstName;
+    }
+
+    workOnHomework(): string {
+        return "Currently working";
     }
 }

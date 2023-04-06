@@ -1,7 +1,7 @@
 export type RowID = number;
 
 export interface RowElement {
-    firstName: string,
     lastName: string,
+    firstName: string,
     age?: number
 }

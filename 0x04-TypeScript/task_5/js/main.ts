@@ -1,10 +1,10 @@
 interface MajorCredits {
-    credits: number;
     brand: string;
+    credits: number;
 }
 interface MinorCredits {
-    credits: number;
     brand: string;
+    credits: number;
 }
 function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits): number {
     return subject1.credits + subject2.credits;
