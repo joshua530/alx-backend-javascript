@@ -8,19 +8,13 @@ function countStudents(path) {
         return;
       }
       const response = [];
-
       const content = data.toString().split('\n');
-
       let students = content.filter((item) => item);
-
       students = students.map((item) => item.split(','));
-
       const NUMBER_OF_STUDENTS = students.length ? students.length - 1 : 0;
       const tmp = `Number of students: ${NUMBER_OF_STUDENTS}`;
       console.log(tmp);
-
       response.push(tmp);
-
       const fields = {};
       for (const i in students) {
         if (i !== 0) {
