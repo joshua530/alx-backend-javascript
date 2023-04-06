@@ -1,5 +1,5 @@
 const getPaymentTokenFromAPI = (success) => {
-  const paymentPromise = new Promise((resolve, reject) => {
+  const paymentPromise = new Promise((resolve, _reject) => {
     if (success) {
       resolve({
         data: 'Successful response from the API'

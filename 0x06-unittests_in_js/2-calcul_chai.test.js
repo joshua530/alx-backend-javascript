@@ -39,12 +39,12 @@ describe('calculateNumber', function () {
   });
 
   describe('#Subtract', () => {
-    it('should return integer as difference with float and float', () => {
-      expect(calculateNumber('SUBTRACT', 1.7, 2.3)).to.equal(0);
-    });
-
     it('should return integer as difference with integer and float', () => {
       expect(calculateNumber('SUBTRACT', 1, 2.3)).to.equal(-1);
+    });
+
+    it('should return integer as difference with float and float', () => {
+      expect(calculateNumber('SUBTRACT', 1.7, 2.3)).to.equal(0);
     });
 
     it('should return integer as difference with integer and integer', () => {
@@ -101,12 +101,12 @@ describe('calculateNumber', function () {
       expect(calculateNumber('DIVIDE', 0.1, 0.2)).to.equal('Error');
     });
 
-    it('should return correct quotient with numbers to be rounded up', () => {
-      expect(calculateNumber('DIVIDE', 0.8, 1.7)).to.equal(0.5);
-    });
-
     it('should return correct quotient with one negative floats', () => {
       expect(calculateNumber('DIVIDE', -1.8, 1.2)).to.equal(-2);
+    });
+
+    it('should return correct quotient with numbers to be rounded up', () => {
+      expect(calculateNumber('DIVIDE', 0.8, 1.7)).to.equal(0.5);
     });
 
     it('should return correct quotient with two negative floats', () => {

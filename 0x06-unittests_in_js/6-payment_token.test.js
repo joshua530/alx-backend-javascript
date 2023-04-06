@@ -11,16 +11,16 @@ const {
     });
   });
 
-  describe('getPaymentTokenFromAPI', () => {
-    it('should return a Promise', () => {
-      const result = getPaymentTokenFromAPI();
-      expect(result).to.be.an.instanceof(Promise);
-  });
-
   it('should reject with doing nothing when false', () => {
     getPaymentTokenFromAPI(false).then(data => {
       expect(data).to.equal('');
       done();
     });
+  });
+
+  describe('getPaymentTokenFromAPI', () => {
+    it('should return a Promise', () => {
+      const result = getPaymentTokenFromAPI();
+      expect(result).to.be.an.instanceof(Promise);
   });
 });

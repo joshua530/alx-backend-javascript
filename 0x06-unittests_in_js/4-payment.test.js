@@ -20,14 +20,6 @@ describe('4-payment.test sendPaymentRequestToApi', () => {
     expect(apiStub.calledOnce).to.be.true;
   });
 
-  it('should call calculateNumber with the correct parameters', () => {
-    const totalAmount = 100;
-    const totalShipping = 10;
-
-    sendPaymentRequestToApi(totalAmount, totalShipping);
-    expect(apiStub.calledWith('SUM', totalAmount, totalShipping)).to.be.true;
-  });
-
   it('should call console.log with correct parameters', () => {
     const totalAmount = 100;
     const totalShipping = 10;
@@ -36,6 +28,14 @@ describe('4-payment.test sendPaymentRequestToApi', () => {
     sendPaymentRequestToApi(totalAmount, totalShipping);
     expect(console.log.calledWith('The total is: 10')).to.be.true;
     console.log.restore();
+  });
+
+  it('should call calculateNumber with the correct parameters', () => {
+    const totalAmount = 100;
+    const totalShipping = 10;
+
+    sendPaymentRequestToApi(totalAmount, totalShipping);
+    expect(apiStub.calledWith('SUM', totalAmount, totalShipping)).to.be.true;
   });
 
   afterEach(() => {
